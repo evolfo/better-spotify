@@ -1,0 +1,12 @@
+<h1>Login</h1>
+
+<%= form_for :session do |f| %>
+
+ Username: <%= f.text_field :username %>
+ Password: <%= f.password_field :password %>
+ <%= f.submit %>
+
+
+<% end %>
+
+New user? <%= button_to "Signup", new_user_path, method: "get" %>

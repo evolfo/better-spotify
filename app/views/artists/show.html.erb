@@ -1,0 +1,13 @@
+<img src="<%=@artist.img_url%>">
+
+<h1><%= @artist.name %></h1>
+<h2><%= @artist.bio %></h2>
+<ul>
+	<% @artist.songs.each do |song| %>
+		<li><%= song.title %>
+			<%= form_for @ do |f| %>
+				<%= f.text_field :playlist_name, list: "playlist_autocomplete", id:":user" %>
+			<% end %>
+		</li>
+	<% end %>
+</ul>

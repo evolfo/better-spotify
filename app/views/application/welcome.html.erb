@@ -1,0 +1,10 @@
+<h1>Hello!</h1>
+
+<ul>
+	<% @artists.each do |artist| %>
+		<li>Artist Name: <%= link_to artist.name, artist %></li>
+		<p>Biography: <%= artist.bio %></p>
+	<% end %>
+</ul>
+
+<%= button_to "Log Out", '/logout' %>
