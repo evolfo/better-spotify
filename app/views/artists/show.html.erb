@@ -5,8 +5,14 @@
 <ul>
 	<% @artist.songs.each do |song| %>
 		<li><%= song.title %>
-			<%= form_for @ do |f| %>
-				<%= f.text_field :playlist_name, list: "playlist_autocomplete", id:":user" %>
+			<%= form_for @user do |f| %>
+				<%= f.text_field :playlist_title, list: "playlist_autocomplete", id:":user" %>
+					<datalist id="playlist_autocomplete">
+						<% @user.playlists.each do |playlist| %>
+							<option value="<%= playlist.id %>">Test</option>
+						<% end %>
+					</datalist>
+				<%= f.submit %>
 			<% end %>
 		</li>
 	<% end %>
