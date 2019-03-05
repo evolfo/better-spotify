@@ -42,7 +42,11 @@ input:focus {
 
 .main_content a {
   text-decoration: none;
-  color: white;
+  color: #ecbd4b;
+}
+
+.main_content a:hover {
+  text-decoration: underline;
 }
 
 

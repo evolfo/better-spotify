@@ -18,12 +18,18 @@
         <%= link_to "Artists", artists_path %>
       </div>
       <div class="nav-button">
-        <%= link_to "Playlists", artists_path %>
+        <%= link_to "Playlists", playlists_path %>
       </div>
       <div class="nav-button">
-        <%= link_to "Logout", '/logout' %>
+        <% if session[:user_id] %>
+          <%= link_to "Log Out", '/logout', id: "logout", method: "post" %>
+        <% else %>
+          <%= link_to "Log In", '/login', id: "login" %>
+        <% end %>
       </div>
     </div>
-    <%= yield %>
+    <div class="main_content">
+    <%= yield %>  
+    </div>  
   </body>
 </html>

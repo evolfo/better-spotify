@@ -1,11 +1,17 @@
 class ApplicationController < ActionController::Base
 
+	before_action :logged_in?
+
 	def welcome
-		if session[:user_id]
-			@artists = Artist.all
-		else
-			redirect_to '/login'
-		end
+		@artists = Artist.all
+	end
+
+	private
+
+	def logged_in?
+		if !session[:user_id]
+			redirect_to controller: 'sessions', action: 'new'
+		end		
 	end
 
 end
