@@ -15,6 +15,6 @@ class User < ApplicationRecord
 	end
 
 	def playlist_title
-		self.playlists.find_by(title: )
+		# self.playlists.find_by(title: )
 	end
 end

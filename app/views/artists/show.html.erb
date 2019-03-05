@@ -1,7 +1,15 @@
+<div class="main_content">
+
+
 <img src="<%=@artist.img_url%>">
 
 <h1><%= @artist.name %></h1>
-<h2><%= @artist.bio %></h2>
+<h2>Bio: <%= @artist.bio %></h2>
+
+
+
+
+
 <ul>
 	<% @artist.songs.each do |song| %>
 		<li><%= song.title %>
@@ -17,3 +25,7 @@
 		</li>
 	<% end %>
 </ul>
+
+
+
+</div>
