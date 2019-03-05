@@ -10,11 +10,13 @@ class User < ApplicationRecord
 
 	def playlist_title=(playlist_title)
 	  if !self.playlists.map(&:title).include?(playlist_title)
-		self.playlists << Playlist.find_or_create_by(title: playlist_title)
+		self.playlists << Playlist.create(title: playlist_title)
+	  else 
+	  	Playlist.find_by(title: playlist_title)
 	  end
 	end
 
 	def playlist_title
-		self.playlists.find_by(title: )
+		# self.playlists.find_by(id: )
 	end
 end
