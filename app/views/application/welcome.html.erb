@@ -1,7 +1,12 @@
-
-		<% @artists.each do |artist| %>
-			<h3>Artist Name: <%= link_to artist.name, artist %></h3>
-			<p>Biography: <%= artist.bio %></p>
-			<br>
-		<% end %>
-
+<div class="home-wrapper">
+  <div class="card-columns">
+	<% @artists.each do |artist| %>
+		<div class="card">
+		  <%= link_to image_tag(artist.img_url), artist %>
+		  <div class="card-body">
+		  <h5 class="card-title"><%= link_to artist.name, artist %></h5>
+		  <!--<p class="card-text">Biography: <%= artist.bio %></p>-->
+		</div>
+	<% end %>
+  </div>
+</div>

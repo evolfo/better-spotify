@@ -9,13 +9,21 @@ class PlaylistsController < ApplicationController
 	end
 
 	def create
+		@artist = Artist.find(params[:artist][:id].to_i)
 		@songs = @artist.songs
-		@playlist = Playlist.create(playlist_params)
+		@playlist = Playlist.find_or_create_by(title: params[:playlist][:playlist_title], user_id: current_user.id)
+		@song = Song.find(params[:songs][:song_id].to_i)
+		@playlist.songs << @song
+		redirect_to @artist
 	end
 
 	private
 
-	def playlist_params
-		params.require(:playlist).permit(:title, :user_id)
-	end
+	# def playlist_params
+	# 	params.require(:playlist).permit(:title, :user_id)
+	# end
+
+	# def song_params
+	# 	params.require(:songs).permit(:song_id)
+	# end
 end

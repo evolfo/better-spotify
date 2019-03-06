@@ -8,27 +8,15 @@
 
 require_relative "../lib/assets/artist_images.rb"
 
-Artist.destroy_all
+
 Song.destroy_all
 Show.destroy_all
+Artist.destroy_all
 
 artists.each do |name, data| 
  	Artist.create(name: name, bio: data[:bio], img_url: data[:img_url])
 end
 
-Dir.foreach('./app/assets/songs') do |folder|
-  next if folder == '.' or folder == '..'
-
-  def delete_extension(file_name)
-    file_name.split(".")[0]
-  end
-
-  artist = Artist.find_by(name: delete_extension(folder))
-
-  Dir.foreach(folder) do |song|
-    Song.create(name: song, path: File.realpath(song), artist_id: artist)
-  end
-end
 
 
 cities = "

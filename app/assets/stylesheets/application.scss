@@ -41,11 +41,7 @@ input:focus {
 
 .main_content a {
   text-decoration: none;
-  color: #ecbd4b;
-}
-
-.main_content a:hover {
-  text-decoration: underline;
+  color: #faad7c;
 }
 
  html, body {
@@ -87,6 +83,10 @@ input:focus {
   color: white;
   text-align: center;
   font-size: 1.5vw;
+
+  a:hover {
+    color: #faad7c;
+  }
 }
 
 .nav-button:hover {
@@ -99,7 +99,9 @@ input:focus {
 }
 
 body a:hover {
-    color: #faad7c
+    color: #84bce0;
+    text-decoration: none;
+    transition: 0.5s;
   }
 
 .nav-button a {
@@ -111,6 +113,21 @@ body a:hover {
   text-align: center;
   img {
     max-width: 300px;
+  }
+}
+
+.home-wrapper {
+  img {
+    max-width: 250px;
+  }
+
+  .card {
+    background-color: transparent;
+    border: none;
+  }
+
+  .card-columns .card {
+    display: block;
   }
 }
 

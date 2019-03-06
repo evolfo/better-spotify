@@ -14,10 +14,11 @@
 <ul>
 	<% @artist.songs.each do |song| %>
 		<li><%= song.title %>
-		<%= form_for @playlist_song do |f| %>
-			<input type="hidden" name="">
-			<%= f.text_field :playlist_title, list: "playlist_autocomplete"%>
-			<datalist id="playlist_autocomplete">
+		<%= form_for @playlist do |f| %>
+			<input type="hidden" name="songs[song_id]" value="<%= song.id%>">
+			<input type="hidden" name="artist[id]" value="<%= @artist.id %>">
+			<%= f.text_field :playlist_title, list: "playlist", :autocomplete => :off %>
+			<datalist id="playlist">
 				<% @user.playlists.each do |playlist| %>
 					<option name="playlist[title]" value="<%= playlist.title %>">
 
