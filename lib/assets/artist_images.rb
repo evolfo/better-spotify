@@ -20,7 +20,7 @@ def artists
 		img_url: "https://4tothefloor.files.wordpress.com/2010/02/ahmad-jamal-02.jpg",
 		bio: "Ahmad Jamal is an American jazz pianist, composer, bandleader, and educator. For five decades, he has been one of the most successful small-group leaders in jazz."
 	},
-	"Rosalía" => {
+	"Rosalia" => {
 		img_url: "https://scontent-lga3-1.cdninstagram.com/vp/a4c3f16315d955a6654c72f5082dfb42/5CEDA079/t51.2885-15/e35/44812898_535180496947276_1053766416437608448_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com&ig_cache_key=MTkxODY2MDE3NDU3MzAyOTMzNg%3D%3D.2",
 		bio: "Genuinely important names don’t come to substitute for others. They create a completely new space, a place nobody had previously thought about, and yet, we would later find it inconceivable that it once didn’t exist. Rosalía breaks new ground when we are still recovering from the impact caused by her debut album. Flamenco singer and pop star. Integral artist, both scenically and creatively. Dancer and singer. Songwriter and producer. Gifted with an extraordinary voice and creator of a sound of her own."
 	},
@@ -36,7 +36,7 @@ def artists
 		img_url: "https://pbs.twimg.com/profile_images/771010489681899520/b5H0sC3Y_400x400.jpg",
 		bio: "Sampha Lahai Sisay, is a singer, songwriter, musician and record producer from Morden, South London, United Kingdom. Sampha is known widely for his collaborative work with SBTRKT, Jessie Ware, Drake, Kanye West, Solange and others. Sampha has released two solo EPs: Sundanza and Dual."
 	},
-	"Anderson .Paak" => {
+	"Anderson Paak" => {
 		img_url: "https://yt3.ggpht.com/a-/AAuE7mBkx4yzqV-RRMoEQ7kgs61bC-ChGySAXbC_6g=s900-mo-c-c0xffffffff-rj-k-no",
 		bio: "Brandon Paak Anderson, better known by his stage name Anderson Paak, is an American musician and record producer from Oxnard, California. He released his debut album, O.B.E. Vol. 1 in 2012, under the pseudonym Breezy Lovejoy. He went on to release Venice in 2014, under his current moniker."
 	},
@@ -59,7 +59,7 @@ def artists
     bio: "Tash Sultana (born 15 June 1995) is an Australian singer-songwriter and multi-instrumentalist, described as a 'one-person band'. Sultana's 2016 single 'Jungle' was voted into third place in the Triple J Hottest 100, 2016; Sultana also had three songs voted into the Triple J Hottest 100, 2017.Sultana grew up in Melbourne, and has been playing guitar from the age of three, beginning a career in music through busking. An active musician on Bandcamp since 2013, Sultana’s recordings were viewed millions of times on YouTube in 2016. Sultana's EP, Notion, was released on 23 September 2016, followed by a sold-out world tour in early 2017."
   },
 
-  "French Kiwi Juice (FKJ)" => {
+  "French Kiwi Juice(FKJ)" => {
     img_url: "https://image-ticketfly.imgix.net/00/03/06/92/41-og.jpg?w=500&h=334&fit=crop&crop=top",
     bio: "Vincent Fenton (born March 26, 1991), known professionally as French Kiwi Juice or the abbreviation FKJ, is a French multi-instrumentalist, singer, and musician from Tours. His self-titled debut album, French Kiwi Juice, was released on March 3, 2017. FKJ has performed at music festivals including Coachella, EUPHORIA, CRSSD, and Lightning in a Bottle."
   },

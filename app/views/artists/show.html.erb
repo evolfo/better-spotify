@@ -13,7 +13,8 @@
 
 <ul>
 	<% @artist.songs.each do |song| %>
-		<li><%= song.title %>
+		<li><%= song.title %></li>
+		<li><%= %>
 		<%= form_for @playlist do |f| %>
 			<input type="hidden" name="songs[song_id]" value="<%= song.id%>">
 			<input type="hidden" name="artist[id]" value="<%= @artist.id %>">

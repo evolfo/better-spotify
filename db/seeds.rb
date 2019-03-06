@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require_relative "../lib/assets/artist_images.rb"
-
+require_relative "../lib/assets/song_creation.rb"
 
 Song.destroy_all
 Show.destroy_all
@@ -18,6 +18,8 @@ artists.each do |name, data|
 end
 
 
+songs = get_songs_from_folders
+create_songs(songs)
 
 cities = "
 les Escaldes
