@@ -1,37 +1,38 @@
 
+<div class="artist-container">
+  <div class="img-wrapper">
+	<img src="<%=@artist.img_url%>">
+  </div>
+	<h1><%= @artist.name %></h1>
+	<p>Bio: <%= @artist.bio %></p>
 
 
-<img src="<%=@artist.img_url%>">
-
-<h1><%= @artist.name %></h1>
-<h2>Bio: <%= @artist.bio %></h2>
 
 
 
+	<ul>
+		<% @artist.songs.each do |song| %>
+			<li><%= song.title %>
+			<%= form_for @playlist_song do |f| %>
+				<input type="hidden" name="">
+				<%= f.text_field :playlist_title, list: "playlist_autocomplete"%>
+				<datalist id="playlist_autocomplete">
+					<% @user.playlists.each do |playlist| %>
+						<option name="playlist[title]" value="<%= playlist.title %>">
 
-
-<ul>
-	<% @artist.songs.each do |song| %>
-		<li><%= song.title %>
-		<%= form_for @playlist_song do |f| %>
-			<input type="hidden" name="">
-			<%= f.text_field :playlist_title, list: "playlist_autocomplete"%>
-			<datalist id="playlist_autocomplete">
-				<% @user.playlists.each do |playlist| %>
-					<option name="playlist[title]" value="<%= playlist.title %>">
-
-					</option>
-				<% end %>
-			</datalist>
-			<%= f.submit %>
+						</option>
+					<% end %>
+				</datalist>
+				<%= f.submit %>
+			<% end %>
+			</li>
 		<% end %>
-		</li>
-	<% end %>
-</ul>
+	</ul>
 
-<ul>
-	<% @artist.shows.each do |show| %>
-		<li><%= link_to "City: #{show.city} Date: #{show.time}", show %></li>
-	<% end %>
-</ul>
+	<ul>
+		<% @artist.shows.each do |show| %>
+			<li><%= link_to "City: #{show.city} Date: #{show.time}", show %></li>
+		<% end %>
+	</ul>
 
+</div>

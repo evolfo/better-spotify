@@ -7,10 +7,12 @@
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Source+Sans+Pro" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
 
   <body>
     <div class="nav-bar">
+      <%= link_to image_tag("logo.png", :alt => "logo"), '/' %>
       <div class="nav-button">
         <%= link_to "Home", root_path %>
       </div>

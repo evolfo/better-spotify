@@ -2,7 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.google-map {
-	width: 40vw;
-	margin: 0 auto;
+.iframe-wrapper {
+  text-align: center;
+  .google-map {
+    width: 75%;
+    height: 43vh;
+  }
 }
