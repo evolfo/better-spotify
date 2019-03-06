@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+  skip_before_action :logged_in?
+
  def new
  end
 
@@ -15,6 +17,7 @@ class SessionsController < ApplicationController
  end
 
  def destroy
+    #session[:user_id] = nil
   	session.delete :user_id
   	redirect_to '/'
  end

@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BetterSpotify</title>
+    <title>!Spotify</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Source+Sans+Pro" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="nav-bar">
+      <div class="nav-button">
+        <%= link_to "Home", root_path %>
+      </div>
+      <% if session[:user_id] %>
+      <div class="nav-button">
+        <%= link_to "Artists", artists_path %>
+      </div>
+      <div class="nav-button">
+        <%= link_to "Playlists", playlists_path %>
+      </div>
+      <div class="nav-button">
+        
+          <%= link_to "Log Out", '/logout', id: "logout", method: "post" %>
+        <% else %>
+          <%= link_to "Log In", '/login', id: "login" %>
+        <% end %>
+      </div>
+    </div>
+    <main class="main_content">
+    <%= yield %>  
+    </main>  
   </body>
 </html>

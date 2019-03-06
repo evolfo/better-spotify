@@ -1,10 +1,7 @@
-<h1>Hello!</h1>
 
-<ul>
-	<% @artists.each do |artist| %>
-		<li>Artist Name: <%= link_to artist.name, artist %></li>
-		<p>Biography: <%= artist.bio %></p>
-	<% end %>
-</ul>
+		<% @artists.each do |artist| %>
+			<h3>Artist Name: <%= link_to artist.name, artist %></h3>
+			<p>Biography: <%= artist.bio %></p>
+			<br>
+		<% end %>
 
-<%= button_to "Log Out", '/logout' %>
