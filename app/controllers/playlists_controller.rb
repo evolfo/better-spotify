@@ -9,6 +9,7 @@ class PlaylistsController < ApplicationController
 	end
 
 	def create
+		@songs = @artist.songs
 		@playlist = Playlist.create(playlist_params)
 	end
 

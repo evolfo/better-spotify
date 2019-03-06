@@ -1,6 +1,6 @@
 class PlaylistSongsController < ApplicationController
 	def create
-		byebug
+		# @song = Song.find(params["artist"][:song_id])
 		@playlist_song = PlaylistSong.create(playlist_song_params)
 	end
 
