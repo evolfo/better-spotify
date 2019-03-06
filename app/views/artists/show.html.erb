@@ -12,12 +12,17 @@
 
 
 <ul>
+	<% i = 0 %>
 	<% @artist.songs.each do |song| %>
 		<li><%= song.title %>
 			<!-- <audio controls>
 				<source src="But-Not-For-Me.mp3" type="audio/mpeg">
 			</audio>  --> 
-			<%= audio_tag("#{@artist.name}/#{song.title}", controls: true) %>
+			<%= audio_tag("#{@artist.name}/#{song.title}", id: "#{song.id}", ontimeupdate: "updateProgress()") %>
+			
+				 <button data-id="<%=song.id %>" onclick="document.getElementById('<%= song.id %>').play()">Play</button>
+				 <button data-id="<%=song.id %>" onclick="document.getElementById('<%= song.id %>').pause()">Pause</button>
+				 <progress id="bar-<%= song.id %>" value="0" max="1" style="width:400px;"></progress>
 		</li>
 		<li>
 		<%= form_for @playlist do |f| %>
