@@ -1,0 +1,8 @@
+	<ul>
+		<% @user.playlists.each do |playlist| %>
+			<h3><%= playlist.title %></h3>
+			<% playlist.songs.each do |song| %>
+				<li><%= song.title %></li>
+			<% end %>
+		<% end %>
+	</ul>

@@ -1,0 +1,14 @@
+<%= form_for @playlist_song do |f| %>
+	<input type="hidden" name="playlist_song[song_id]" value="<%= %>">
+	<% byebug %>
+	<%= f.text_field :playlist_title, list: "playlist_autocomplete"%>
+						
+		<datalist id="playlist_autocomplete">
+			<% @user.playlists.each do |playlist| %>
+				<option name="playlist[title]" value="<%= playlist.title %>">
+
+				</option>
+			<% end %>
+		</datalist>
+	<%= f.submit %>
+<% end %>

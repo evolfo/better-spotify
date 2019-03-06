@@ -1,0 +1,9 @@
+
+  <div class="iframe-wrapper">
+	<iframe class="google-map" frameborder=“0” style=“border:0"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyALsem88pPSA_xhMNaliNmAiRQd3DGvdqg&q=<%= @show.city %>" allowfullscreen></iframe>
+  </div>
+
+	<h1>Artist: <%= link_to @show.artist.name, @show.artist %></h1>
+	<h3>City: <%= @show.city %></h3>
+	<h4>Date: <%= @show.time %></h4>
