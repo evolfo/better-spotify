@@ -20,10 +20,9 @@
 //= require bootstrap/dist/js/bootstrap
 //= require_tree .
 
-
 // This function is for the progress bar
-    function updateProgress(songId) {
-            var player = document.getElementById(songId);
-            var progressbar = document.querySelector(`#bar-${songId}`);
-            progressbar.value = (player.currentTime / player.duration);
-    };
+	function updateProgress(songId) {
+			var player = document.getElementById(songId);
+			var progressbar = document.querySelector(`#bar-${songId}`);
+			progressbar.value = (player.currentTime / player.duration);
+	};
