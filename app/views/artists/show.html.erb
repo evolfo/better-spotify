@@ -55,10 +55,11 @@
 
 
 <div class="row pushing-shows">
-	<h2>Shows</h2>
-	<div class="col-md-12 grid">
+	<div id="shows-h2"><h2>Shows</h2></div>
+	<div class="flex-shows">
+
 		<% @artist.sorted_shows.each do |show| %>
-				
+
 				  <ul>
 					<li><%= link_to "City: #{show.city}", show %></li>
 					<li>Date: <%= show.time.strftime('%A, %B %e, %Y') %></li>
