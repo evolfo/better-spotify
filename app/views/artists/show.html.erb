@@ -8,41 +8,38 @@
       playlist and adding the song to it. It also has the audio player which is
       using application.js to update the progress bar. -->
 
-<h2>Music</h2>
-<br>
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-md-5">
 		<ul>
-			<% i = 0 %>
 			<% @artist.songs.each do |song| %>
-				<li class="song-li"><h4 class="song-title"><%= song.title %></h4>
-				</li>
-				<div id="audio-controls-wrapper-<%= song.id %>" data-id="<%=song.id %>">
+					<li class="song-li">
+					  <h4 class="song-title"><%= song.title %>
+						<li class="playlist-li dropdown">
+							<%= form_for @playlist do |f| %>
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown">. . .</a>
+							  <ul class="dropdown-menu">
+								<input type="hidden" name="songs[song_id]" value="<%= song.id%>">
+								<input type="hidden" name="artist[id]" value="<%= @artist.id %>">
+								<%= f.text_field :playlist_title, list: "playlist", :autocomplete => :off, :placeholder => "Enter a playlist name" %>
+								<datalist id="playlist">
+									<% @user.playlists.each do |playlist| %>
+										<option name="playlist[title]" value="<%= playlist.title %>">
+
+										</option>
+									<% end %>
+								</datalist>
+								<%= f.submit "Add To Playlist"%>
+							  </ul>
+							<% end %>
+						</li>
+					  </h4>
+					</li>
+					<div id="audio-controls-wrapper-<%= song.id %>" data-id="<%=song.id %>">
 
 						<%= audio_tag("#{@artist.name}/#{song.title}", id: "#{song.id}", ontimeupdate: "updateProgress(#{song.id})") %>
 							 <button class="play-button fas fa-play" data-id="<%=song.id %>" onclick="document.getElementById('<%= song.id %>').play(); <% song.update(play_count: song.play_count += 1) %>" ></button>
 							 <button class="pause-button fas fa-pause" data-id="<%=song.id %>" onclick="document.getElementById('<%= song.id %>').pause()"></button>
 							 <progress class="progress-bar" id="bar-<%= song.id %>" value="0" max="1"></progress>
-
-				</div>
-				<li class="playlist-li dropdown">
-				<%= form_for @playlist do |f| %>
-				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">. . .</a>
-				  <ul class="dropdown-menu">
-					<input type="hidden" name="songs[song_id]" value="<%= song.id%>">
-					<input type="hidden" name="artist[id]" value="<%= @artist.id %>">
-					<%= f.text_field :playlist_title, list: "playlist", :autocomplete => :off %>
-					<datalist id="playlist">
-						<% @user.playlists.each do |playlist| %>
-							<option name="playlist[title]" value="<%= playlist.title %>">
-
-							</option>
-						<% end %>
-					</datalist>
-					<%= f.submit "Add To Playlist"%>
-				  </ul>
-				<% end %>
-				</li>
 			<% end %>
 		</ul>
 	</div>
