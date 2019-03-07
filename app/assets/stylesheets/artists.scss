@@ -10,8 +10,10 @@
 }
 
 .grid {
+			width: 100%;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-row: 30vh 30vh 30vh;
+			grid-auto-flow: column;
     }
 
 .img-wrapper {
@@ -95,11 +97,25 @@
 }
 
 
-.flex-shows {
-	height: 140vh;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+.shows-wrapper {
+ // margin-top: 450px;
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+ max-height: 100vh;
+
+}
+
+.margin-up {
+	margin-top: 350px;
+}
+
+.show-box {
+	padding-bottom: 2vh;
+}
+
+.shows-h2 {
+	margin-left: 38px;
 }
 
 #shows-h2 {

@@ -54,17 +54,12 @@
 </div>
 
 
-<div class="row pushing-shows">
-	<div id="shows-h2"><h2>Shows</h2></div>
-	<div class="flex-shows">
-
+<div>
+	<h2 class="margin-up shows-h2">Shows</h2>
+	<ul class="shows-wrapper" >
 		<% @artist.sorted_shows.each do |show| %>
-
-				  <ul>
-					<li><%= link_to "City: #{show.city}", show %></li>
-					<li>Date: <%= show.time.strftime('%A, %B %e, %Y') %></li>
-				  </ul>
-
+				<li class="show-box"><%= link_to "City: #{show.city}", show %>
+				Date: <%= show.time.strftime('%A, %B %e, %Y') %></li>
 		<% end %>
-	</div>
+		</ul>
 </div>
