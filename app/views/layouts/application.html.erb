@@ -20,14 +20,18 @@
       <div class="nav-button">
         <%= link_to "Artists", '/' %>
       </div>
-      <div class="nav-button dropright">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Playlists</a>
-          <ul class="dropdown-menu">
-            <% current_user.playlists.each do |playlist| %>
-              <a href="/playlists/<%= playlist.id %>"><li><%= playlist.title %></li></a>
-            <% end %>
-          </ul> 
-      </div>
+    <!-- If the user has 1 or more playlists, the caret and playlist box will appear -->
+      <% if current_user.playlists.length > 0 %>
+        <div class="nav-button dropright">
+          
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Playlists</a>
+                <ul class="dropdown-menu">
+                  <% current_user.playlists.each do |playlist| %>
+                    <a href="/playlists/<%= playlist.id %>"><li><%= playlist.title %></li></a>
+                  <% end %>
+                </ul> 
+        </div>
+      <% end %>
       <div class="nav-button">
         <%= link_to "Analytics", '/analytics' %>
       </div>

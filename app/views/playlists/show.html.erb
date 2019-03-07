@@ -1,11 +1,14 @@
 <div class="main_content">
 
-<h2><%= @playlist.title %></h2>
-<%= form_for @playlist  do |f| %>
-  <%= f.text_field :title %>
-  <br />
-<%= f.submit "Update Playlist Name" %>
-<% end %>
+<h2><%= @playlist.title %>
+	<div class="dropdown">
+		<%= form_for @playlist  do |f| %>
+		  <%= f.text_field :title %>
+		  <br />
+		<%= f.submit "Update Playlist Name" %>
+		<% end %>
+	</div>
+</h2>
 
 <ul>
 <% @playlist.songs.each do |song| %>

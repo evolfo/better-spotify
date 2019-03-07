@@ -19,6 +19,7 @@
   display: block;
   margin-bottom: 3vh;
 } */
+
 input {
   border-radius: 10px;
   border: none;
@@ -51,6 +52,10 @@ input:focus {
 
   h1, h2, h3, h4, h5, p, a {font-weight: 100;}
   h4 {}
+
+  img {
+      box-shadow: 9px 9px 3px black;
+    }
 }
 
 
@@ -173,6 +178,7 @@ body a:hover {
   img {
     max-width: 55px;
     position: absolute;
+    box-shadow: none;
   }
   ul {
     margin-left: 2.5vw;
@@ -184,6 +190,7 @@ body a:hover {
   img {
     max-width: 55px;
     position: absolute;
+    box-shadow: none;
   }
   ul {
     margin-left: 2.5vw;
@@ -224,6 +231,12 @@ video{
       background-color: #faad7c7d;
       transition: .3s;
     }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
 }
 
 ::placeholder {

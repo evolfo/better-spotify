@@ -10,8 +10,8 @@
 }
 
 .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+	  display: -webkit-inline-box;
+ 
     }
 
 .img-wrapper {
@@ -28,9 +28,9 @@
 }
 
 .play-button, .pause-button {
-	height: 3vw;
-	width: 3vw;
-	margin-right: 2vw;
+	height: 1.8vw;
+	width: 1.8vw;
+	margin-right: .5vw;
 	border-radius: 100%;
 }
 
@@ -71,6 +71,7 @@
 	input {
       background-color: #000d22;
       border-radius: 0px;
+      color: white;
     }
 
     input[type="submit"] {
@@ -123,17 +124,25 @@
 	 border-radius: 5px;
 }
 
-
-.flex-shows {
-	height: 140vh;
+.song-player-line {
 	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+	padding-top: .8em;
+}
+
+.flex-direction-row {
+	display: flex; flex-direction: row;
 }
 
 #shows-h2 {
 	display: block;
 	width: 100vw;
-	height: 10vh;
+	max-height: 20vh;
 	margin-left: 21px;
+}
+
+
+/* YouTube player */
+#ytplayer {
+	border: 6px solid #ffaa72;
+	box-shadow: 9px 9px 3px black;
 }
