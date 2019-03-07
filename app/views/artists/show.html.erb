@@ -2,23 +2,26 @@
 	<img src="<%=@artist.img_url%>">
 </div>
 <h1><%= @artist.name %></h1>
-<p>Bio: <%= @artist.bio %></p>
+<p><%= @artist.bio %></p>
 
 <!--  Inside the <ul> is for adding songs to the user's playlist or creating a new
       playlist and adding the song to it. It also has the audio player which is 
       using application.js to update the progress bar. -->
 
+<h2>Music</h2>
+<br>
 <ul>
 	<% @artist.songs.each do |song| %>
-		<li><%= song.title %>
+		<li class="song-li"><h3 class="song-title"><%= song.title %></h3>
+			<div class="audio-controls-wrapper">
 
-			<%= audio_tag("#{@artist.name}/#{song.title}", id: "#{song.id}", ontimeupdate: "updateProgress()") %>
-			
-				 <button data-id="<%=song.id %>" onclick="document.getElementById('<%= song.id %>').play()">Play</button>
-				 <button data-id="<%=song.id %>" onclick="document.getElementById('<%= song.id %>').pause()">Pause</button>
-				 <progress id="bar-<%= song.id %>" value="0" max="1" style="width:400px;"></progress>
+				<%= audio_tag("#{@artist.name}/#{song.title}", id: "#{song.id}", ontimeupdate: "updateProgress()") %>
+					 <button class="play-button fas fa-play" data-id="<%=song.id %>" onclick="document.getElementById('<%= song.id %>').play()"></button>
+					 <button class="pause-button fas fa-pause" data-id="<%=song.id %>" onclick="document.getElementById('<%= song.id %>').pause()"></button>
+					 <progress class="progress-bar" id="bar-<%= song.id %>" value="0" max="1" style="width:35vw; height:3vh;"></progress>
+			</div>
 		</li>
-		<li>
+		<li class="playlist-li">
 		<%= form_for @playlist do |f| %>
 			<input type="hidden" name="songs[song_id]" value="<%= song.id%>">
 			<input type="hidden" name="artist[id]" value="<%= @artist.id %>">
@@ -36,9 +39,10 @@
 	<% end %>
 </ul>
 
+
+<h2>Shows</h2>
 <ul>
 	<% @artist.shows.each do |show| %>
 		<li><%= link_to "City: #{show.city} Date: #{show.time}", show %></li>
 	<% end %>
 </ul>
-

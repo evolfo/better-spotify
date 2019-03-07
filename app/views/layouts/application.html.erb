@@ -4,6 +4,7 @@
     <title>!Spotify</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Source+Sans+Pro" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -28,7 +29,7 @@
           </ul> 
       </div>
       <div class="nav-button">
-        
+
           <%= link_to "Log Out", '/logout', id: "logout", method: "post" %>
         <% else %>
           <%= link_to "Log In", '/login', id: "login" %>
@@ -47,8 +48,8 @@
       </li> -->
     </div>
     <main class="main_content">
-    <%= yield %>  
-    </main>  
+    <%= yield %>
+    </main>
   </body>
 </html>
 

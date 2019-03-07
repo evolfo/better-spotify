@@ -20,7 +20,7 @@ def artists
 		img_url: "https://4tothefloor.files.wordpress.com/2010/02/ahmad-jamal-02.jpg",
 		bio: "Ahmad Jamal is an American jazz pianist, composer, bandleader, and educator. For five decades, he has been one of the most successful small-group leaders in jazz."
 	},
-	"Rosalia" => {
+	"Rosalía" => {
 		img_url: "https://scontent-lga3-1.cdninstagram.com/vp/a4c3f16315d955a6654c72f5082dfb42/5CEDA079/t51.2885-15/e35/44812898_535180496947276_1053766416437608448_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com&ig_cache_key=MTkxODY2MDE3NDU3MzAyOTMzNg%3D%3D.2",
 		bio: "Genuinely important names don’t come to substitute for others. They create a completely new space, a place nobody had previously thought about, and yet, we would later find it inconceivable that it once didn’t exist. Rosalía breaks new ground when we are still recovering from the impact caused by her debut album. Flamenco singer and pop star. Integral artist, both scenically and creatively. Dancer and singer. Songwriter and producer. Gifted with an extraordinary voice and creator of a sound of her own."
 	},
@@ -50,7 +50,7 @@ def artists
   },
 
   "Bob Marley" => {
-    img_url: "http://www.bobmarley.com/wp-content/uploads/2013/10/bob-marley-legend-the-best-of-delantera-400x400.jpg",
+    img_url: "http://app3.rthk.hk/special/teentime/uploads/photo/14696771735042.jpg",
     bio: "Robert Nesta Marley, OM (6 February 1945 – 11 May 1981) was a Jamaican singer-songwriter who became an international musical and cultural icon, blending mostly reggae, ska, and rocksteady in his compositions. He started in 1963 with the group the Wailers and forged a distinctive songwriting and vocal style that became popular with audiences worldwide. The Wailers released some of the earliest reggae records with producer Lee 'Scratch' Perry."
   },
 
@@ -65,7 +65,7 @@ def artists
   },
 
   "Fairuz" => {
-    img_url: "https://cps-static.rovicorp.com/3/JPG_500/MI0001/886/MI0001886442.jpg?partner=allrovi.com",
+    img_url: "https://s3.amazonaws.com/bit-photos/large/205662.jpeg",
     bio: "Nouhad Wadie' Haddad (Arabic: نهاد وديع حداد‎; born November 21, 1934), known as Fairuz (Arabic: فيروز‎), also spelled Fairouz, Feyrouz or Fayrouz, is a Lebanese singer who is one of the most admired and influential singers in the Arab world. Her songs are constantly heard across the region and broadcast on the radios each morning. She is also known as an icon in modern Arabic music and has sold over 150 million records worldwide, making her and Umm Kulthum the two best-selling Middle-Eastern artists of all time. She was first noticed at the International Festival of Baalbeck, where she performed many of her songs. She became famous after appearing on the 'Lebanese Nights' part of the festival for many successive years. Fairuz is commonly known as 'Ambassador to the Stars', 'Ambassador of the Arabs' after the title of one of her albums, 'the Moon's Neighbour' for her song about the moon of Machgara, and the 'Jewel of Lebanon'."
   },
 
@@ -80,7 +80,7 @@ def artists
   },
 
   "Amy Winehouse" => {
-    img_url: "https://images-na.ssl-images-amazon.com/images/I/71abjP2YYhL._SX522_.jpg",
+    img_url: "https://starcasm.net/wp-content/uploads/2014/08/Amy-Winehouse.jpg",
     bio: "Amy Winehouse won five Grammy Awards for her 2006 album Back to Black, and is remembered for songs like 'Rehab,' 'Back to Black' and 'Valerie'. She died in 2011, at age 27. Born in London, England, on September 14, 1983, Amy Winehouse broke into the music business when, at age 16, a classmate passed on her demo tape to a record label. She signed her first record deal as a jazz vocalist, and her music later blossomed into an eclectic mix of jazz, pop, soul and R&B. Winehouse won five Grammy Awards connected to her 2006 album Back to Black, and earned acclaim for songs like the title track, 'Rehab' and 'Love Is a Losing Game'. Winehouse died tragically on July 23, 2011, at the age of 27 from accidental alcohol poisoning."
   }
 
