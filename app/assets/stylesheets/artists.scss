@@ -55,6 +55,35 @@
 	display: flex;
 }
 
+.playlist-li.dropdown {
+	.dropdown-toggle::after{
+		display: none;
+	}
+
+	a {
+		font-weight: 900;
+	}
+
+	display: inline-block;
+	ul {
+		padding: 0px;
+	}
+	input {
+      background-color: #000d22;
+      border-radius: 0px;
+    }
+
+    input[type="submit"] {
+      color: #fff;
+      background-color: #033a6bba;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #000d22;
+      transition: .3s;
+    }
+}
+
 .new_playlist {
 	padding: 1rem;
 }
