@@ -1,23 +1,17 @@
-
-
-
 <div class="img-wrapper">
 	<img src="<%=@artist.img_url%>">
 </div>
 <h1><%= @artist.name %></h1>
 <p>Bio: <%= @artist.bio %></p>
 
-
-
-
+<!--  Inside the <ul> is for adding songs to the user's playlist or creating a new
+      playlist and adding the song to it. It also has the audio player which is 
+      using application.js to update the progress bar. -->
 
 <ul>
-	<% i = 0 %>
 	<% @artist.songs.each do |song| %>
 		<li><%= song.title %>
-			<!-- <audio controls>
-				<source src="But-Not-For-Me.mp3" type="audio/mpeg">
-			</audio>  --> 
+
 			<%= audio_tag("#{@artist.name}/#{song.title}", id: "#{song.id}", ontimeupdate: "updateProgress()") %>
 			
 				 <button data-id="<%=song.id %>" onclick="document.getElementById('<%= song.id %>').play()">Play</button>

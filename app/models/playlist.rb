@@ -7,13 +7,7 @@ class Playlist < ApplicationRecord
 	validates :title, presence: true
 	validates :user_id, presence: true
 
-	# def title=(title)
- #      self.title = Playlist.find_or_create_by(title: title)
- #    end
- 
- #    def title
- #      self.title ? self.title : nil
- #    end
+	# Allows the user to input a new playlist title in the text_box form
 
     def playlist_title=(title)
       self.title = Playlist.find_or_create_by(title: title)
