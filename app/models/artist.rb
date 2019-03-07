@@ -11,9 +11,13 @@ class Artist < ApplicationRecord
 	end
 
 	def self.alive_artists
-		Artist.all.select do |artists|
+		Artist.all.select do |artist|
 			artist.name != "Bob Marley" && artist.name != "Amy Winehouse"
 		end
+	end
+
+	def sorted_shows
+		self.shows.sort_by(&:time)
 	end
 
 end

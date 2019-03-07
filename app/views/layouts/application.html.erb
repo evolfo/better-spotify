@@ -13,7 +13,7 @@
 
   <body>
     <div class="nav-bar">
-      <%= link_to image_tag("logo.png"), '/' %>
+      <%= link_to image_tag("logo.png"), '/login' %>
 
     <!-- Elements within this if statement are only shown if the user is logged in --> 
       <% if session[:user_id] %>
@@ -29,11 +29,12 @@
           </ul> 
       </div>
       <div class="nav-button">
-
+        <%= link_to "Analytics", '/analytics' %>
+      </div>
+      <div class="nav-button">
           <%= link_to "Log Out", '/logout', id: "logout", method: "post" %>
-        <% else %>
-          <%= link_to "Log In", '/login', id: "login" %>
         <% end %>
+      <!-- end of the if statement for people logged in -->
       </div>
     </div>
     <main class="main_content">

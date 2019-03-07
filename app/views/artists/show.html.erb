@@ -43,14 +43,16 @@
 
 
 <h2>Shows</h2>
-<ul>
-	<% @artist.shows.each do |show| %>
-		<li><%= link_to "City: #{show.city}", show %></li>
-		<li>Date: <%= show.time %></li>
-		<br>
-	<% end %>
-</ul>
+<div class="grid">
+	<% @artist.sorted_shows.each do |show| %>
+			
+			  <ul>
+				<li><%= link_to "City: #{show.city}", show %></li>
+				<li>Date: <%= show.time.strftime('%A, %B %e, %Y') %></li>
+			  </ul>
 
+	<% end %>
+</div>
 <h2>Videos</h2>
 
 <div class="col-md-12 videos">

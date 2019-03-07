@@ -23042,13 +23042,15 @@ Epworth
 Chitungwiza
 ".split("\n")
 
-rand_time = Time.now + rand(15552000)
-rand_date = rand_time.strftime('%A, %B %e, %Y')
-
 500.times do
+	rand_time = Time.now + rand(15552000)
+	rand_date = rand_time.strftime('%A, %B %e, %Y')
+	
 	show = Show.new(city: cities.sample, time: rand_date)
 	show.artist = Artist.alive_artists.sample
 	show.save
 end
+
+Song.find_by(title: "Arpi").update(play_count: rand(9999..1010100))
 
 puts "Success!"

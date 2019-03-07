@@ -6,4 +6,4 @@
 
 	<h1>Artist: <%= link_to @show.artist.name, @show.artist %></h1>
 	<h3>City: <%= @show.city %></h3>
-	<h4>Date: <%= @show.time %></h4>
+	<h4>Date: <%= @show.time.strftime('%A, %B %e, %Y') %></h4>

@@ -1,32 +1,37 @@
+<div class="row">
+  <div class="col-lg-6">
+    <h1>Most Played Songs</h1>
+    <ol>
+      <% @sorted_songs.each do |song| %>
+        <li>
+          <div class="top-song-wrapper">
+            <%= image_tag(song.artist.img_url) %>
+            <ul>
+              <li><%= song.title %> by <%=link_to song.artist.name, song.artist %></li>
+              <li>Plays: <%= song.play_count %></li>
+           </ul>
+          </div>
+        </li>
+      <% end %>
+    </ol>
+  </div>
 
+  <div class="col-lg-6">
+    <h1>Artists With The Most Songs</h1>
+    <ol>
 
-<h1>Most Played Songs</h1>
-<ol>
-  <% @sorted_songs.each do |song| %>
-    <li>
-      <div class="top-song-wrapper">
-        <%= image_tag(song.artist.img_url, width: '100vw') %>
-        Song:<%= song.title %>
-        Artist:<%=link_to song.artist.name, song.artist %>
-        Play Count:<%= song.play_count %>
-      </div>
-    </li>
-  <% end %>
-</ol>
+      <% @sorted_artists.each do |artist| %>
+        <li>
+          <div class="top-song-wrapper2">
+            <%= image_tag(artist.img_url) %>
+            <ul>
+              <li>Artist: <%= link_to artist.name, artist %></li>
+              <li># of Songs: <%= artist.num_of_songs %></li>
+            </ul>
+          </div>
+        </li>
+      <% end %>
 
-
-
-<h1>Artists With The Most Songs</h1>
-<ol>
-
-  <% @sorted_artists.each do |artist| %>
-    <li>
-      <div class="top-song-wrapper">
-        <%= image_tag(artist.img_url, width: '100vw') %>
-        Artist: <%= link_to artist.name, artist %>
-        Song Count: <%= artist.num_of_songs %>
-      </div>
-    </li>
-  <% end %>
-
-</ol>
+    </ol>
+  </div>
+</div>

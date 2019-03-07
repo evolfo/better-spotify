@@ -1,24 +1,20 @@
-<h1>Login</h1>
+<div class="front-page high-z-index">
+	<%= video_tag "slow-mo.mp4", autoplay: true, loop: true, muted: true, class: "home-vid"%>
+	<%= form_for :session, :html => {:class => 'high-z-index'} do |f| %>
 
-<%= form_for :session do |f| %>
+		 <%= f.text_field :username, placeholder: "Username" %>
+		 <br>
+		 <br>
+		 <%= f.password_field :password, placeholder: "Password" %>
+		 <br>
+		 <br>
+		 <%= f.submit "Login", class: "front-buttons" %>
+		 <br>
+		 <br>
+	<% end %>
 
- Username
- <br>
- <%= f.text_field :username %>
- <br>
- <br>
- <br>
- Password
- <br>
- <%= f.password_field :password %>
- <br>
- <br>
- <br>
- <%= f.submit "Login" %>
- <br>
- <br>
- <br>
-
-<% end %>
-
-New user? <%= button_to "Signup", new_user_path, method: "get" %>
+	<h4 class="high-z-index">New user?</h4> 
+	<div class="high-z-index">
+		<%= button_to "Signup", new_user_path, method: "get", class: 'high-z-index front-buttons' %>
+	</div>
+</div>
