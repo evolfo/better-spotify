@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require jquery3
 //= require jquery_ujs
+//= require bootstrap/dist/js/bootstrap
 //= require_tree .
 
 // This function is for the progress bar

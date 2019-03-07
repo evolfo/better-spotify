@@ -14,12 +14,19 @@
   <body>
     <div class="nav-bar">
       <%= link_to image_tag("logo.png"), '/' %>
+
+    <!-- Elements within this if statement are only shown if the user is logged in --> 
       <% if session[:user_id] %>
       <div class="nav-button">
         <%= link_to "Artists", '/' %>
       </div>
-      <div class="nav-button">
-        <%= link_to "Playlists", playlists_path %>
+      <div class="nav-button dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Playlists</a>
+          <ul class="dropdown-menu">
+            <% current_user.playlists.each do |playlist| %>
+              <li><%= link_to playlist.title, playlist %></li>
+            <% end %>
+          </ul> 
       </div>
       <div class="nav-button">
 
@@ -28,9 +35,21 @@
           <%= link_to "Log In", '/login', id: "login" %>
         <% end %>
       </div>
+      <!-- <li class="dropdown">
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Attend <b class="caret"></b></a>
+           <ul class="dropdown-menu">
+              <li><a href="/about">About</a></li>
+              <li><a href="/agenda">Agenda</a></li>
+              <li><a href="/about#why-attend">Why Attend</a></li>
+              <li><a href="/first-time">First Time Attendees</a></li>
+              <li><a href="/register">Register</a></li>                  
+              <li><a href="/lodging">Lodging</a></li>
+           </ul>
+      </li> -->
     </div>
     <main class="main_content">
     <%= yield %>
     </main>
   </body>
 </html>
+
