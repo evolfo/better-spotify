@@ -29,7 +29,6 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	margin-bottom: 4vh;
 }
 
 .audio-controls-wrapper {
@@ -42,14 +41,18 @@
 
 .playlist-li {
 	display: flex;
-	margin-bottom: 3vh;
 }
-// progress {
-// 	display: inline;
-// }
-// .progress-bar{
-// 	background-color: white;
-// }
+
+.new_playlist {
+	padding: 1rem;
+}
+
+
+/* PROGRESS BAR CSS */
+
+.progress-bar {
+	margin-top: 8px;
+}
 
 .progress-bar[value] {
   /* Reset the default appearance */
@@ -77,5 +80,12 @@
 		-webkit-linear-gradient(left, #09c, #f44);
 
 	 border-radius: 5px;
-	 // background-size: 35px 20px, 100% 100%, 100% 100%;
 }
+
+
+
+
+
+
+
+
