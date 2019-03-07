@@ -13,7 +13,7 @@ Song.destroy_all
 Show.destroy_all
 Artist.destroy_all
 
-artists.each do |name, data| 
+artists.each do |name, data|
  	Artist.create(name: name, bio: data[:bio], img_url: data[:img_url])
 end
 
@@ -23045,9 +23045,9 @@ Chitungwiza
 rand_time = Time.now + rand(15552000)
 rand_date = rand_time.strftime('%A, %B %e, %Y')
 
-100.times do 
+500.times do
 	show = Show.new(city: cities.sample, time: rand_date)
-	show.artist = Artist.all.sample
+	show.artist = Artist.alive_artists.sample
 	show.save
 end
 
