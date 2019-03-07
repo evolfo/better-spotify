@@ -5,6 +5,14 @@ class PlaylistSongsController < ApplicationController
 		redirect_to artist_path(@playlist_song.song.artist)
 	end
 
+	def destroy
+		# byebug
+		@playlist_song = PlaylistSong.find(params[:id])
+		@playlist = @playlist_song.playlist
+		@playlist_song.delete
+		redirect_to @playlist
+	end
+
 	private
 
 	def playlist_song_params

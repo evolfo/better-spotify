@@ -13,19 +13,18 @@
 <h2>Music</h2>
 <br>
 <ul>
-	<% i = 0 %>
 	<% @artist.songs.each do |song| %>
 		<li class="song-li"><h3 class="song-title"><%= song.title %></h3>
 			<!-- <audio controls>
 				<source src="But-Not-For-Me.mp3" type="audio/mpeg">
 			</audio>  -->
-			<div class="audio-controls-wrapper">
+			<div id="audio-controls-wrapper-<%= song.id %>" data-id="<%=song.id %>">
 
-				<%= audio_tag("#{@artist.name}/#{song.title}", id: "#{song.id}", ontimeupdate: "updateProgress()") %>
-
+				<%= audio_tag("#{@artist.name}/#{song.title}", id: "#{song.id}", ontimeupdate: "updateProgress(#{song.id})") %>
 					 <button class="play-button fas fa-play" data-id="<%=song.id %>" onclick="document.getElementById('<%= song.id %>').play()"></button>
 					 <button class="pause-button fas fa-pause" data-id="<%=song.id %>" onclick="document.getElementById('<%= song.id %>').pause()"></button>
 					 <progress class="progress-bar" id="bar-<%= song.id %>" value="0" max="1" style="width:35vw; height:3vh;"></progress>
+
 			</div>
 		</li>
 		<li class="playlist-li">
@@ -40,7 +39,7 @@
 					</option>
 				<% end %>
 			</datalist>
-			<%= f.submit %>
+			<%= f.submit "Add To Playlist"%>
 		<% end %>
 		</li>
 	<% end %>
