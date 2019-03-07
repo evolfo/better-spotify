@@ -15,24 +15,15 @@
 //= require turbolinks
 //= require jquery3
 //= require jquery_ujs
+//= require popper
+//= require bootstrap
 //= require bootstrap/dist/js/bootstrap
 //= require_tree .
 
-// ARTIST SHOW PAGE JS
-	let songId;
-	// This code enables to have access to the particular song's ID
-	document.addEventListener('DOMContentLoaded',()=>{
-		document.querySelector('ul').addEventListener('click', (event)=>{
-			if (event.target.tagName == 'BUTTON') {
-				// debugger
-				songId = event.target.dataset.id
-				console.log(songId)
-			}
-		})
-	})
-	// This function is for the progress bar
-		function updateProgress() {
-		    var player = document.getElementById(songId);
-		    var progressbar = document.querySelector(`#bar-${songId}`);
-		    progressbar.value = (player.currentTime / player.duration);
-		};
+
+// This function is for the progress bar
+    function updateProgress(songId) {
+            var player = document.getElementById(songId);
+            var progressbar = document.querySelector(`#bar-${songId}`);
+            progressbar.value = (player.currentTime / player.duration);
+    };

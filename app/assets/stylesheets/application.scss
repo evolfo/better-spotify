@@ -54,6 +54,11 @@ input:focus {
   background: linear-gradient(90deg, rgba(32,40,50,1) 0%, rgb(7, 40, 80) 52%, rgb(10, 63, 99) 100%);
 }
 
+ul {
+  list-style-type: none;
+}
+
+/* NAV BAR CSS */
 
 .nav-bar {
   position: fixed;
@@ -67,6 +72,7 @@ input:focus {
   display:flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 
   a {
     text-align: center;
@@ -75,6 +81,28 @@ input:focus {
   img {
     width: 50%;
   }
+
+  .dropdown-menu {
+    background: #000d22;
+    border: 5px solid #ffaa72;
+    padding: 0px;
+    left: 10px !important;
+
+    a:hover {
+      color:white
+    }
+    li {
+      padding: 1rem;
+      text-align: left;
+    }
+    li:hover {
+      background-color: #faad7c82;
+      transition: 0.3s;
+    }
+  }
+  .show {
+      min-width: 30vw;
+    }
 }
 
 .nav-button {
@@ -87,16 +115,20 @@ input:focus {
   a:hover {
     color: #faad7c;
   }
+
+  a {
+  text-decoration: none;
+  color: white;
+  }
 }
 
 .nav-button:hover {
   /* background-color: #000fff; */
   border-left: 0.2vh solid #faad7c;
   border-right: 0.2vh solid #faad7c;
-
-
-
 }
+
+/* END NAV BAR CSS */
 
 body a:hover {
     color: #84bce0;
@@ -104,10 +136,6 @@ body a:hover {
     transition: 0.5s;
   }
 
-.nav-button a {
-  text-decoration: none;
-  color: white;
-}
 
 .img-wrapper{
   text-align: center;
@@ -117,19 +145,15 @@ body a:hover {
 }
 
 .home-wrapper {
-
   img {
     max-width: 20vw;
     border: 1vh solid #faad7c;
   }
-
   .card {
     background-color: transparent;
     border: none;
   }
-
   .card-body {
     padding: .25rem
-
   }
 }

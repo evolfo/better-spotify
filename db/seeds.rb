@@ -23045,7 +23045,7 @@ Chitungwiza
 rand_time = Time.now + rand(15552000)
 rand_date = rand_time.strftime('%A, %B %e, %Y')
 
-10.times do 
+100.times do 
 	show = Show.new(city: cities.sample, time: rand_date)
 	show.artist = Artist.all.sample
 	show.save
