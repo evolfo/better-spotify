@@ -11,6 +11,7 @@
 <h2>Music</h2>
 <br>
 <ul>
+	<% i = 0 %>
 	<% @artist.songs.each do |song| %>
 		<li class="song-li"><h3 class="song-title"><%= song.title %> || <%= song.play_count %></h3>
 			<!-- <audio controls>
@@ -47,6 +48,8 @@
 <h2>Shows</h2>
 <ul>
 	<% @artist.shows.each do |show| %>
-		<li><%= link_to "City: #{show.city} Date: #{show.time}", show %></li>
+		<li><%= link_to "City: #{show.city}", show %></li>
+		<li>Date: <%= show.time %></li>
+		<br>
 	<% end %>
 </ul>
