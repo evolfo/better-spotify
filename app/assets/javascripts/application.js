@@ -26,3 +26,8 @@
 			var progressbar = document.querySelector(`#bar-${songId}`);
 			progressbar.value = (player.currentTime / player.duration);
 	};
+
+
+// function playCount() {
+// 	document.getElementById("myBtn").addEventListener("click", someOtherFunction);
+// }

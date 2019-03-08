@@ -3,7 +3,9 @@ class Song < ApplicationRecord
 	has_many :playlist_songs
 	has_many :playlists, through: :playlist_songs
 
-	def self.most_played_songs
-		self.all.sort_by(&:play_count).reverse	
+
+	#This is for most viewed artists not most played songs
+	def self.most_viewed_artists
+		songs = self.all.sort_by(&:play_count).reverse.uniq(&:artist)	
 	end
 end

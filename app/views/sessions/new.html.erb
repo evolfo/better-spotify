@@ -1,5 +1,4 @@
-<div class="front-page high-z-index">
-	<%= video_tag "slow-mo.mp4", autoplay: true, loop: true, muted: true, class: "home-vid"%>
+
 	<%= form_for :session, :html => {:class => 'high-z-index'} do |f| %>
 
 		 <%= f.text_field :username, placeholder: "Username" %>
@@ -17,4 +16,3 @@
 	<div class="high-z-index">
 		<%= button_to "Signup", new_user_path, method: "get", class: 'high-z-index front-buttons' %>
 	</div>
-</div>

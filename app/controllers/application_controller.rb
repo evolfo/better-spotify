@@ -8,12 +8,14 @@ class ApplicationController < ActionController::Base
 	end
 
 	def analytics
-		@sorted_songs = Song.most_played_songs
+		@sorted_songs = Song.most_viewed_artists
 		@sorted_artists = Artist.artists_sorted_by_num_of_songs
 	end
 
 	def current_user
-		User.find(session[:user_id])
+	  if session[:user_id]
+	  	User.find(session[:user_id])
+	  end
 	end
 
 	private
@@ -22,6 +24,10 @@ class ApplicationController < ActionController::Base
 		if !session[:user_id]
 			redirect_to controller: 'sessions', action: 'new'
 		end
+	end
+
+	def not_found
+	 	raise ActionController::RoutingError.new("Not Found")
 	end
 
 end

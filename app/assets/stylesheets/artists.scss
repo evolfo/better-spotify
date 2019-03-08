@@ -10,7 +10,10 @@
 }
 
 .grid {
-	  display: -webkit-inline-box;
+	  width: 100%;
+      display: grid;
+      grid-template-row: 30vh 30vh 30vh;
+   		grid-auto-flow: column;
     }
 
 .img-wrapper {
@@ -123,23 +126,18 @@
 	 border-radius: 5px;
 }
 
-<<<<<<< HEAD
 .song-player-line {
 	display: flex;
 	padding-top: .8em;
 }
-
-.flex-direction-row {
-	display: flex; flex-direction: row;
-=======
 
 .shows-wrapper {
  // margin-top: 450px;
  display: flex;
  flex-direction: column;
  flex-wrap: wrap;
- max-height: 100vh;
-
+ max-height: 80vh;
+ font-size: x-large;
 }
 
 .margin-up {
@@ -152,7 +150,6 @@
 
 .shows-h2 {
 	margin-left: 38px;
->>>>>>> 5e1bae5e8f599f84314ae8e0c4455132fde84419
 }
 
 #shows-h2 {

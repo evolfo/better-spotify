@@ -1,27 +1,44 @@
+
+<% if @user.errors %>
+  <% @user.errors.full_messages.each do |message| %>
+	<h2><%= message %></h2>
+  <% end %>
+<% end %>
+
+<% if flash[:error] %>
+	<%= flash[:error] %>
+<% end %>
+
+
 <h1>Create a new account:</h1>
-<%= form_for @user do |f| %>
+<%= form_for @user, :html => {:class => 'high-z-index'} do |f| %>
 
- Username
- <br>
- <%= f.text_field :username %>
- <br>
- <br>
- Email
- <br>
- <%= f.email_field :email %>
+ 
+
+ <%= f.text_field :username, placeholder: "Username" %>
  <br>
  <br>
- Password
- <br>
- <%= f.password_field :password %>
- <br>
- <br>
- Password Confirmation
- <br>
- <%= f.password_field :password_confirmation %>
+ 
+
+ <%= f.email_field :email, placeholder: "Email" %>
  <br>
  <br>
 
- <%= f.submit "Create Account"%>
+ <%= f.password_field :password, placeholder: "Password" %>
+ <br>
+ <br>
+
+
+ <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+ <br>
+ <br>
+
+ <%= f.submit "Create Account", class: "front-buttons" %>
 
 <% end %>
+
+<br>
+<h4 class="high-z-index">Already a member?</h4> 
+<div class="high-z-index">
+	<%= button_to "Login", '/login', method: "get", class: 'high-z-index front-buttons' %>
+</div>

@@ -3,6 +3,12 @@ class SessionsController < ApplicationController
   skip_before_action :logged_in?
 
  def new
+  if current_user
+    redirect_to '/'
+  else
+    # render 'sessions/new'
+    render :layout => "_video_background"
+  end
  end
 
  def create

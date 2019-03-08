@@ -247,3 +247,9 @@ video{
 .high-z-index {
   z-index: 1;
 }
+
+/* Used on playlist and artist page */
+
+.flex-direction-row {
+  display: flex; flex-direction: row;
+}

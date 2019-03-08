@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :playlist_songs, only: [:create, :destroy]
   # resources :songs
   resources :artists, only: [:show, :index]
-  resources :users
+  resources :users, only: [:new, :create]
+
+  #post '/users' => 'users#new'
 
   root "application#welcome"
 
