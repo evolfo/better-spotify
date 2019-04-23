@@ -1,6 +1,6 @@
 # !Spotify
 
-###### Welcome to !Spotify, the music playing app build with Ruby on Rails. You must sign in to view the full site.
+## Welcome to !Spotify, the music playing app built with Ruby on Rails. You must sign in to view the full site.
 
 ![Login Page](https://i.imgur.com/pJE0vvB.jpg)
 
