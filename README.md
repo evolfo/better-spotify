@@ -1,24 +1,13 @@
-# README
+# !Spotify
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Login Page](https://i.imgur.com/pJE0vvB.jpg)
 
-Things you may want to cover:
+###### Welcome to !Spotify, the music playing app build with Ruby on Rails. You must sign in to view the full site
 
-* Ruby version
+# When first logging in you can see all the artists:
 
-* System dependencies
+![Artists Page](https://i.imgur.com/hoZ6MbJ.jpg)
 
-* Configuration
+# From there, clicking on an artist will take you to their page where you can see their songs, a YouTube playlist using the YouTube API, and their upcoming shows: 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Artist Page](https://i.imgur.com/2dUSitJ.jpg)
