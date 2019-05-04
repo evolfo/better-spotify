@@ -1,4 +1,6 @@
-# !Spotify
+# !Spotify 
+
+##### http://not--spotify.herokuapp.com/ username: test password: test
 
 ## Welcome to !Spotify, the music playing app built with Ruby on Rails. You must sign in to view the full site.
 
